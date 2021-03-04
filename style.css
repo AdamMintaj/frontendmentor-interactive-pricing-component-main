@@ -214,7 +214,6 @@ main
 .profits
 {
 	border-top: 1px solid lightgray;
-	margin: 2em auto;
 	width: 100%;
 }
 
@@ -233,7 +232,6 @@ input[type=submit]
 	width:50%;
 	height: 3.2em;
 	border-radius: 30px;
-	padding: 12px;
 	cursor: pointer;
 }
 
