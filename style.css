@@ -252,7 +252,7 @@ footer a
 	color: hsl(228, 45%, 44%);
 }
 
-@media screen and (min-width: 800px)
+@media screen and (min-width: 1000px)
 {
 	#container
 	{
@@ -328,7 +328,7 @@ footer a
 
 	.profits p
 	{
-		padding-left: 4em;
+		padding-left: 3.8em;
 	}
 
 	.profits>p:nth-child(2)
