@@ -17,16 +17,16 @@
 
 	<main class="pricingComponent">
 		<form class="pricingComponent__formWrapper" autocomplete="off">
-			<p class="pricingComponent__pageviews"><span id="views"></span> PAGEVIEWS</p>
+			<label class="pricingComponent__pageviews" id="views" for="slider">PAGEVIEWS</label>
 		
-			<input class="pricingComponent__slider" type="range" min="0" max="40" value="20" step="10" id="oneRange">
+			<input class="pricingComponent__slider" type="range" min="0" max="40" value="20" step="10" id="slider">
 
 			<p class="pricingComponent__price"><span class="pricingComponent__number" id="price"></span> /month</p>
 
 			<div class="pricingComponent__billing">
 				<p class="billing__text billing__text--monthly">Monthly Billing</p>
 				
-				<label class="billing__switch" id="switch">
+				<label class="billing__switch" id="switch" for="checkbox">
 					<input class="switch__checkbox" id="checkbox" type="checkbox" checked="">
 					<span class="switch__toggle" id="toggle"></span>
 				</label>

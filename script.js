@@ -25,7 +25,7 @@ function handleInput() {
 	let discount = checkbox.checked;
 	let currentOption = prices[slider.value / 10];
 
-	viewsHolder.innerHTML = currentOption.views;
+	viewsHolder.innerHTML = `${currentOption.views} PAGEVIEWS`;
 	if (discount) {
 		priceHolder.innerHTML = `${currentOption.price * 0.75}$`;
 	} else {
