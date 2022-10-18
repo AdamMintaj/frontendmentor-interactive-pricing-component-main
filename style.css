@@ -384,6 +384,7 @@ body {
   }
   .pricingComponent__number {
     font-size: 2.8em;
+    vertical-align: middle;
   }
   .pricingComponent__billing {
     -ms-grid-row: 3;

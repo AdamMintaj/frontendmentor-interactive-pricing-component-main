@@ -27,9 +27,9 @@ function handleInput() {
 
 	viewsHolder.innerHTML = `${currentOption.views} PAGEVIEWS`;
 	if (discount) {
-		priceHolder.innerHTML = `${currentOption.price * 0.75}$`;
+		priceHolder.innerHTML = `$${currentOption.price * 0.75}.00 `;
 	} else {
-		priceHolder.innerHTML = `${currentOption.price}$`;
+		priceHolder.innerHTML = `$${currentOption.price}.00 `;
 	}
 }
 
