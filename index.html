@@ -1,84 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet"> 
-  <title>Frontend Mentor | Interactive pricing component</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial scale=1.0">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet"> 
+	<title>Frontend Mentor | Interactive pricing component</title>
 </head>
 <body>
+	<header class="header">
+		<h1 class="header__heading">Simple, traffic-based pricing</h1>
+		<p class="header__text">Sign-up for our 30-day trial. No credit card required.</p>
+	</header>
 
-  <div id="container">
-    <header>
-      <h1>Simple, traffic-based pricing</h1>
-      <h2>Sign-up for our 30-day trial. No credit card required.</h2>
-    </header>
+	<main class="pricingComponent">
+		<form class="pricingComponent__formWrapper" autocomplete="off">
+			<p class="pricingComponent__pageviews"><span id="views"></span> PAGEVIEWS</p>
+		
+			<input class="pricingComponent__slider" type="range" min="0" max="40" value="20" step="10" id="oneRange">
 
-    <main>
-      <div class="counter">
-        <p><span id="views"></span> PAGEVIEWS</p>
-      </div>
-      
-      <div class="sliderContainer">
-        <input type="range" min="20" max="500" value="260" class="slider" step="40" id="oneRange">
-      </div>
+			<p class="pricingComponent__price"><span class="pricingComponent__number" id="price"></span> /month</p>
 
-      <div class="price">
-        <p><span id="usd"></span>/month</p>
-      </div>
+			<div class="pricingComponent__billing">
+				<p class="billing__text billing__text--monthly">Monthly Billing</p>
+				
+				<label class="billing__switch" id="switch">
+					<input class="switch__checkbox" id="checkbox" type="checkbox" checked="">
+					<span class="switch__toggle" id="toggle"></span>
+				</label>
+				
+				<p class="billing__text billing__text--yearly">Yearly Billing</p>
+				<p class="billing__discount">-25% <span class="pricingComponent__desktopOnly">discount</span></p>
+			</div>
 
-      <div class="billing">
+			<ul class="pricingComponent__features">
+				<li class="pricingComponent__featuresListItem">Unlimited websites</li>
+				<li class="pricingComponent__featuresListItem">100% data ownership</li>
+				<li class="pricingComponent__featuresListItem">Email reports</li>
+			</ul>
 
-        <p>Monthly Billing</p>
-        
-        <label id="switch">
-        
-          <input id="checkbox" type="checkbox" checked="">
-        
-          <span id="toggle"></span>
-        
-        </label>
-        
-        <p>Yearly Billing</p>
-        
-        <div class="discount">
-          <p>-25% <span class="desktop_only">discount</span></p>
-        </div>
+			<input class="pricingComponent__submitButton" type="submit" value="Start my trial">
+		</form>
+	</main>
 
-      </div>
+	<footer class="footer">
+		<p class="footer__text">
+			Challenge by <a class="footer__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+			Coded by <a class="footer__link" href="https://github.com/AdamMintaj">Adam Mintaj</a>.
+		</p>
+	</footer>
 
-        <div class="profits">
-          <p>
-            <img src="images/icon-check.svg" alt="icon">Unlimited websites
-          </p>
-
-          <p>
-            <img src="images/icon-check.svg" alt="icon">100% data ownership
-          </p>
-
-          <p>
-            <img src="images/icon-check.svg" alt="icon">Email reports
-          </p>
-        </div>
-
-        <div class="cta">
-          <input type="submit" value="Start my trial">
-        </div>
-
-    </main>
-
-    <footer>
-      <p>
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="https://github.com/AdamMintaj">Adam Mintaj</a>.
-      </p>
-    </footer>
-  </div>
-
-  <script src="script.js"></script>
-
+	<script src="script.js"></script>
 </body>
 </html>

@@ -1,44 +1,38 @@
-var checkbox = document.getElementById("checkbox");
-var label_switch = document.getElementById("switch");
-var toggle = document.getElementById("toggle");
-var price = document.getElementById("usd");
-var views = document.getElementById("views");
-var slider = document.getElementById("oneRange");
-var sum = 0;
+// These are my awesome variables
+const slider = document.querySelector(".pricingComponent__slider");
+const checkbox = document.querySelector(".switch__checkbox");
+const viewsHolder = document.getElementById("views");
+const priceHolder = document.getElementById("price");
 
-function loadValue()
-{
-	if(checkbox.checked)
-		sum = (0.75*(0.05*slider.value+11)).toFixed(2);
-	else
-		sum = (0.05*slider.value+11).toFixed(2);
+const prices = [
+	{ views: "10K", price: 8 },
+	{ views: "50K", price: 12 },
+	{ views: "100K", price: 16 },
+	{ views: "500K", price: 24 },
+	{ views: "1M", price: 36 },
+];
 
-	views.innerHTML = slider.value + "K";
-	price.innerHTML = "$" + sum;
+// This funciton colors the covered part of the slider track
+function handleProgressBar() {
+	let value = slider.value;
+	slider.style.backgroundSize = `${2.5 * value}%`;
 }
 
-window.onload = loadValue();
-slider.addEventListener("input", loadValue);
+slider.addEventListener("input", handleProgressBar);
 
-function bananas()
-{
-	if(checkbox.checked)
-		{
-			label_switch.style.backgroundColor = "#A5F3EB";
-			toggle.style.right = "4px";
-		}
-	else
-		{
-			label_switch.style.backgroundColor = "#CDD7EE";
-			toggle.style.right = "22px";
-		}
+// This function displays pageviews and price
+function handleInput() {
+	let discount = checkbox.checked;
+	let currentOption = prices[slider.value / 10];
 
-	loadValue();
+	viewsHolder.innerHTML = currentOption.views;
+	if (discount) {
+		priceHolder.innerHTML = `${currentOption.price * 0.75}$`;
+	} else {
+		priceHolder.innerHTML = `${currentOption.price}$`;
+	}
 }
 
-checkbox.addEventListener("click", bananas);
-
-slider.addEventListener("input", function()
-{
-	slider.classList.add(".js");
-})
+slider.addEventListener("input", handleInput);
+checkbox.addEventListener("input", handleInput);
+window.onload = handleInput();
