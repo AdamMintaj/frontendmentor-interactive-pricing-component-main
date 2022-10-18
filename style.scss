@@ -4,13 +4,20 @@
 	box-sizing: border-box;
 }
 
+html {
+	min-height: 100vh;
+}
+
 body
 {
+	min-height: 100vh;
 	font-family: "Manrope";
 	background-image: url("images/bg-pattern.svg");
 	background-repeat: no-repeat;
 	background-position: top left;
 	font-size: 12px;
+	display: flex;
+	flex-direction: column;
 }
 
 .header
@@ -49,6 +56,10 @@ body
 	border-radius: 25px;
 	box-shadow: 5px 5px 30px lightgray;
 	color: #8891ab;
+	flex-grow: 1;
+	max-height: 500px;
+	display: flex;
+	flex-direction: column;
 }
 
 .pricingComponent__formWrapper
@@ -59,6 +70,7 @@ body
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
+	flex-grow: 1;
 }
 
 .pricingComponent__pageviews

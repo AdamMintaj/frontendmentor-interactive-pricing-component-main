@@ -5,12 +5,24 @@
           box-sizing: border-box;
 }
 
+html {
+  min-height: 100vh;
+}
+
 body {
+  min-height: 100vh;
   font-family: "Manrope";
   background-image: url("images/bg-pattern.svg");
   background-repeat: no-repeat;
   background-position: top left;
   font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .header {
@@ -57,6 +69,17 @@ body {
   -webkit-box-shadow: 5px 5px 30px lightgray;
           box-shadow: 5px 5px 30px lightgray;
   color: #8891ab;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  max-height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .pricingComponent__formWrapper {
@@ -73,6 +96,9 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .pricingComponent__pageviews {
